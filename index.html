@@ -4,27 +4,92 @@
 <head>
     <title>test - page</title>
     <meta charse="uft-8">
+    <style>
+        a {
+            color: black;
+            text-decoration: none;
+        }
+
+        h1 {
+            font-size: 45px;
+            text-align: center;
+            text-shadow: 5px 5px darkgray;
+            border-bottom: 1px solid black;
+            margin: 0;
+            padding: 20px;
+        }
+
+        ol {
+            padding-right: 10px;
+            margin: 0;
+            width: 100px;
+        }
+
+        div.main_body ul {
+            border-right: 1px solid black;
+            margin: 0;
+            padding-left: 20px;
+            background-color: rgba(231, 228, 228, 0.678);
+            display: inline-block;
+            align-content: center;
+        }
+
+        .main_body {
+            display: grid;
+            grid-template-columns: 180px 1fr;
+        }
+
+        div.main_body li {
+            margin: 10px;
+        }
+
+        .article {
+            padding: 10px 10px 10px 10px;
+        }
+
+        #main_image{
+            max-width:100%;
+            height:auto;
+        }
+
+        .Big_type {
+            font-size: x-large;
+            font-weight: bold;
+        }
+
+        @media(max-width:800px) {
+            .main_body {
+                display: block;
+                grid-template-columns: 180px 1fr;
+            }
+
+            div.main_body ul {
+                display: none;
+            }
+        }
+
+        
+    </style>
 </head>
 
 <body>
-    <h1><u><a href="index.html">WEB</a></u></h1>
-    <ol>
-        <li><a href="1.html">HTML</a></li>
-        <li><a href="2.html">CSS</a></li>
-        <li><a href="3.html">JavaScript</a></li>
-    </ol>
-    <h1>HTML</h1>
-    <p><a href="https://www.w3.org/TR/html5/" target="_black" title="html5-specification">Hypertext Markup Language
-            (HTML)</a> is the standard markup language for <strong>creating <u>web</u> pages</strong>
-        and web applications.Web browsers receive HTML documents from a web server or from local storage and render them
-        into multimedia web pages. HTML describes the structure of a web page semantically and originally included cues
-        for the appearance of the document.</p>
-    <p style="margin-top:45px;">HTML elements are the building blocks of HTML pages. With HTML constructs,
-        images and other objects, such as interactive forms, may be embedded into the rendered page.
-        It provides a means to create structured documents by denoting structural semantics for text such as headings,
-        paragraphs, lists, links, quotes and other items. HTML elements are delineated by tags, written using angle
-        brackets. </p>
-    <img src="test_image.jpg" width="30%">
+    <h1><a href="index.html">WEB</a></h1>
+    <div class="main_body">
+        <ul>
+            <li class="Big_type">Table</li>
+            <ol>
+
+                <li><a href="1.html">HTML</a></li>
+                <li><a href="2.html">CSS</a></li>
+                <li><a href="3.html">JavaScript</a></li>
+
+            </ol>
+        </ul>
+        <div class="article">
+            <img id="main_image" src="main_image.jpg" >
+        </div>
+
+    </div>
 </body>
 
 </html>
