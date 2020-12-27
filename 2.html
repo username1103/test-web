@@ -60,12 +60,34 @@
         @media(max-width:800px) {
             .main_body {
                 display: block;
-                grid-template-columns: 180px 1fr;
             }
 
             div.main_body ul {
-                display: none;
+                padding:0;
+                width:100%;
+                border-right: 0;
+                border-bottom: 1px solid black;
+
             }
+            div.main_body ol{
+                width:100%;
+                padding:0;
+                margin:0 0 0 0;
+            }
+            li.Big_type {
+                display: none
+            }
+
+            div.main_body ol li {
+                list-style-type: none;
+                float: left;
+                padding-top:2px;
+                padding-bottom:2px;
+                margin:0;
+                text-align:center;
+                width:33.3%;
+            }
+        }
         }
     </style>
 </head>
