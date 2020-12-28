@@ -24,24 +24,27 @@ var Title = {
         document.querySelector('#main_title').style.textShadow = attribute;
     }
 }
-function get_mode(){
-    return sessionStorage.mode;
+function get_mode() {
+    return localStorage.mode;
 }
 function nightDayToggle(self) {
     if (self.value == 'Light Mode') {
+        // set light mode
         Bodys.SetBackgroundColor('white')
         Bodys.SetColor('black')
         self.value = 'Dark Mode';
-        sessionStorage.mode='Light Mode';
+        localStorage.mode = 'Light Mode';
         document.querySelector('.main_body dl').style.color = 'black';
 
         Links.SetColor('black');
     } else {
+        // set dark mode
         Bodys.SetBackgroundColor('rgb(47,49,53)');
         Bodys.SetColor('rgb(230, 230, 230)');
         self.value = 'Light Mode';
+        localStorage.mode = 'Dark Mode';
         document.querySelector('.main_body dl').style.color = 'rgb(31,78,79)';
-        sessionStorage.mode='Dark Mode';
+        
 
         Links.SetColor('rgb(31,78,79)')
     }
