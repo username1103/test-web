@@ -5,11 +5,11 @@
     <title>test - page</title>
     <meta charse="uft-8">
     <link rel="stylesheet" href="style.css">
-    </style>
+    <script src="colors.js"></script>
 </head>
 
 <body>
-    <h1><a href="index.html">WEB</a></h1>
+    <h1 id="main_title"><a href="index.html">WEB</a></h1>
     <div class="main_body">
         <ul>
             <li class="Big_type">Table</li>
@@ -22,18 +22,7 @@
             </ol>
         </ul>
         <div class="article">
-            <input type="button" value="Change mode" id="day_night" title="change_mode" onclick="
-        current_color = document.querySelector('body').style.backgroundColor;
-        if(current_color == 'rgba(0, 0, 0, 0.52)'){
-            document.querySelector('h1').style.backgroundColor = 'white';
-            document.querySelector('body').style.backgroundColor = 'white';
-            document.querySelector('body').style.color='black';
-        } else {
-            document.querySelector('h1').style.backgroundColor = 'rgba(0, 0, 0, 0.52)';
-            document.querySelector('body').style.backgroundColor = 'rgba(0, 0, 0, 0.52)';
-            document.querySelector('body').style.color='rgb(230, 230, 230)';
-        }
-        ">
+            <input type="button" value="Light Mode" id="day_night" onclick="nightDayToggle(this)">
             <h2>HTML</h2>
             <p><a href="https://www.w3.org/TR/html5/" target="_blank" title="html5-specification"><strong>Hypertext
                         Markup
