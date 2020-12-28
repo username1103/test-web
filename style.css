@@ -50,9 +50,8 @@ div.article {
     max-width: 100%;
     height: auto;
 }
-.current_page {
-    background-color: rgba(230, 166, 82, 0.747);
-    text-decoration-line: underline;
+.main_body ul ol li.current_page a {
+    background-color: rgba(235, 185, 121, 0.795);
 }
 
 .Big_type {
@@ -89,5 +88,12 @@ div.article {
         margin:0;
         text-align:center;
         width:33.3%;
+    }
+    .main_body ul ol li.current_page {
+        background-color: rgba(235, 185, 121, 0.795);
+        
+    }
+    .main_body ul ol li.current_page a {
+        background-color: transparent;
     }
 }
