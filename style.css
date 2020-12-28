@@ -36,7 +36,6 @@ div.main_body ul {
     display: grid;
     grid-template-columns: 180px 1fr;
     height:100%;
-    position:relative;
 }
 
 div.main_body li {
@@ -45,6 +44,7 @@ div.main_body li {
 
 div.article {
     padding: 10px 10px 10px 10px;
+    position:relative;
 }
 
 #main_image {
@@ -61,13 +61,12 @@ div.article {
 }
 
 #day_night {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     position: absolute;
     top:15px;
     right:15px;
-    width:10px;
-    height:15px;
-    border-radius:50%;
-    display:inline;
+    border-radius:70%;
+    display:inline-block;
     background-color: white;
     border-color:black;
 }

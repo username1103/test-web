@@ -11,18 +11,6 @@
 <body>
     <h1><a href="index.html">WEB</a></h1>
     <div class="main_body">
-        <input type="button" value="" id="day_night" onclick="
-        current_color = document.querySelector('body').style.backgroundColor;
-        if(current_color == 'rgba(0, 0, 0, 0.52)'){
-            document.querySelector('h1').style.backgroundColor = 'white';
-            document.querySelector('body').style.backgroundColor = 'white';
-            document.querySelector('body').style.color='black';
-        } else {
-            document.querySelector('h1').style.backgroundColor = 'rgba(0, 0, 0, 0.52)';
-            document.querySelector('body').style.backgroundColor = 'rgba(0, 0, 0, 0.52)';
-            document.querySelector('body').style.color='rgb(230, 230, 230)';
-        }
-        ">
         <ul>
             <li class="Big_type">Table</li>
             <ol>
@@ -34,6 +22,18 @@
             </ol>
         </ul>
         <div class="article">
+            <input type="button" value="Change mode" id="day_night" title="change_mode" onclick="
+        current_color = document.querySelector('body').style.backgroundColor;
+        if(current_color == 'rgba(0, 0, 0, 0.52)'){
+            document.querySelector('h1').style.backgroundColor = 'white';
+            document.querySelector('body').style.backgroundColor = 'white';
+            document.querySelector('body').style.color='black';
+        } else {
+            document.querySelector('h1').style.backgroundColor = 'rgba(0, 0, 0, 0.52)';
+            document.querySelector('body').style.backgroundColor = 'rgba(0, 0, 0, 0.52)';
+            document.querySelector('body').style.color='rgb(230, 230, 230)';
+        }
+        ">
             <h2>HTML</h2>
             <p><a href="https://www.w3.org/TR/html5/" target="_blank" title="html5-specification"><strong>Hypertext
                         Markup
