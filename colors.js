@@ -25,25 +25,23 @@ var Title = {
     }
 }
 function get_mode(){
-    return localStorage.mode;
+    return sessionStorage.mode;
 }
 function nightDayToggle(self) {
-    if (self.value === 'Dark Mode') {
-        Title.SetBackgroundColor('white');
-        Title.SetTextShadow('5px 5px darkgray');
+    if (self.value == 'Light Mode') {
         Bodys.SetBackgroundColor('white')
         Bodys.SetColor('black')
-        self.value = 'Light Mode';
-        localStorage.mode='Light';
+        self.value = 'Dark Mode';
+        sessionStorage.mode='Light Mode';
+        document.querySelector('.main_body dl').style.color = 'black';
 
         Links.SetColor('black');
     } else {
-        Title.SetBackgroundColor('rgb(30,30,30)');
-        Title.SetTextShadow('5px 5px white');
-        Bodys.SetBackgroundColor('rgba(0, 0, 0, 0.52)');
+        Bodys.SetBackgroundColor('rgb(47,49,53)');
         Bodys.SetColor('rgb(230, 230, 230)');
-        self.value = 'Dark Mode';
-        localStorage.mode='black';
+        self.value = 'Light Mode';
+        document.querySelector('.main_body dl').style.color = 'rgb(31,78,79)';
+        sessionStorage.mode='Dark Mode';
 
         Links.SetColor('rgb(31,78,79)')
     }
