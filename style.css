@@ -5,7 +5,7 @@ body {
     margin: 10px;
 }
 a {
-    color: black;
+    color:inherit;
     text-decoration: none;
 }
 
@@ -36,6 +36,7 @@ div.main_body ul {
     display: grid;
     grid-template-columns: 180px 1fr;
     height:100%;
+    position:relative;
 }
 
 div.main_body li {
@@ -51,12 +52,24 @@ div.article {
     height: auto;
 }
 .main_body ul ol li.current_page a {
-    background-color: rgba(235, 185, 121, 0.795);
+    background-color:rgba(235, 185, 121, 0.795);
 }
 
 .Big_type {
     font-size: x-large;
     font-weight: bold;
+}
+
+#day_night {
+    position: absolute;
+    top:15px;
+    right:15px;
+    width:10px;
+    height:15px;
+    border-radius:50%;
+    display:inline;
+    background-color: white;
+    border-color:black;
 }
 
 @media(max-width:800px) {

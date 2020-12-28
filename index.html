@@ -10,6 +10,18 @@
 <body>
     <h1><a href="index.html">WEB</a></h1>
     <div class="main_body">
+        <input type="button" value="" id="day_night" onclick="
+        current_color = document.querySelector('body').style.backgroundColor;
+        if(current_color == 'rgba(0, 0, 0, 0.52)'){
+            document.querySelector('h1').style.backgroundColor = 'white';
+            document.querySelector('body').style.backgroundColor = 'white';
+            document.querySelector('body').style.color='black';
+        } else {
+            document.querySelector('h1').style.backgroundColor = 'rgba(0, 0, 0, 0.52)';
+            document.querySelector('body').style.backgroundColor = 'rgba(0, 0, 0, 0.52)';
+            document.querySelector('body').style.color='rgb(230, 230, 230)';
+        }
+        ">
         <ul>
             <li class="Big_type">Table</li>
             <ol>
