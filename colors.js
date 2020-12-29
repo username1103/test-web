@@ -1,27 +1,22 @@
 var Links = {
     SetColor: function (color) {
-        var a_list = document.querySelectorAll('a');
-        var i = 0;
-        while (i < a_list.length) {
-            a_list[i].style.color = color;
-            i = i + 1;
-        }
+        $('a').css('color', color);
     }
 }
 var Bodys = {
     SetColor: function (color) {
-        document.querySelector('body').style.color = color;
+        $('body').css('color', color);
     },
     SetBackgroundColor: function (color) {
-        document.querySelector('body').style.backgroundColor = color;
+        $('body').css('background-color', color);
     }
 }
 var Title = {
     SetBackgroundColor: function (color) {
-        document.querySelector('#main_title').style.backgroundColor = color;
+        $('#main_title').css('color', color);
     },
     SetTextShadow: function (attribute) {
-        document.querySelector('#main_title').style.textShadow = attribute;
+        $('#main_title').css('background-color', color);
     }
 }
 function get_mode() {
