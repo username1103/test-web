@@ -7,27 +7,46 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="colors.js"></script>
+    <script src="topic.js"></script>
 </head>
 
 <body>
-    <h1 id="main_title"><a href="index.html">WEB</a></h1>
+    <h1 id="main_title"><a href="#!Home" onclick="fetchContent(this)">WEB</a></h1>
     <div class="main_body">
-        <dl>
-            <li class="type"><a href="1.html">HTML</a></li>
-            <li class="type"><a href="2.html">CSS</a></li>
-            <li class="type"><a href="3.html">JavaScript</a></li>
-        </dl>
+        <div class="tab">
+            <ul>
+                <li><a class="tabBtn" href="#!HTML" onclick="fetchContent(this)">HTML</a></li>
+                <li><a class="tabBtn" href="#!CSS" onclick="fetchContent(this)">CSS</a></li>
+                <li><a class="tabBtn" href="#!JavaScript" onclick="fetchContent(this)">JavaScript</a></li>
+            </ul>
+        </div>
         <div class="article">
-            <input type="button" value="Dark Mode" id="day_night" onclick="nightDayToggle(this)">
-            <img id="main_image" src="main_image.jpg">
+            <input type="button" value="Dark Mode" id="modeToggle" onclick="nightDayToggle(this.value)">
+            <div class="content">
+
+            </div>
         </div>
 
     </div>
     <script>
-        var target = document.querySelector('#day_night');
+
+        // fetch('Tablist').then(function (response) {
+        //     response.text().then(function (text) {
+        //         document.querySelector('.tab ul').innerHTML = text;
+        //     })
+        // })
+
+        if (location.hash) {
+            fetchContent(document.querySelector('a[href="' + location.hash + '"]'));
+        } else {
+            fetchContent(document.querySelector('a[href="#!Home"]'));
+        }
+
+
+
         var mode = get_mode();
-        if(mode != null && mode == target.value){
-            target.click();
+        if (mode != null && mode == "Dark Mode") {
+            setDarkMode();
         }
     </script>
 </body>
